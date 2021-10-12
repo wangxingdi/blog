@@ -1,2 +1,2 @@
-# thinking
-思考
+# blog
+我的博客
