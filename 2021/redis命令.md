@@ -1,6 +1,7 @@
 ---
-title: Redis命令
-date: 2021-11-25
+title: "Redis命令"
+date: "2021-11-25T10:25:25+08:00"
+slug: "redis-command"
 draft: true
 ---
 
