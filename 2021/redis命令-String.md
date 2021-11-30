@@ -1,5 +1,5 @@
 ---
-title: "Redis命令"
+title: "Redis命令-String"
 date: "2021-11-25T10:25:25+08:00"
 slug: "redis-command-string"
 draft: false
@@ -10,6 +10,7 @@ draft: false
 SET key value [EX seconds | PX milliseconds | EXAT timestamp | PXAT milliseconds-timestamp | KEEPTTL] [NX | XX] [GET]
 
 > 自版本1.0.0可用
+>
 > 时间复杂度：O(1)
 
 
@@ -71,7 +72,7 @@ SET key value [EX seconds | PX milliseconds | EXAT timestamp | PXAT milliseconds
   "OK"
   ```
 
-* `KEEPTTL`：继承当前key被覆盖前的过期时间。一般来说，如果执行set key value命令时，如果key已经存在，那么不管之前这个key是否存在过期时间，都会被覆盖掉。此时，如果需要仅仅修改value值而不影响过期时间，则需要KEEPTTL可选项。
+* `KEEPTTL`：继承当前key被覆盖前的过期时间。一般来说，如果执行set key value命令时，如果key已经存在，那么不管之前这个key是否存在过期时间，都会被覆盖掉。此时，如果需要仅仅修改value值而不影响过期时间，则需要KEEPTTL这个可选项。
 
   ```bash
   ## 先设置一个200秒后过期的key-value键值对，然后使用keepttl进行重新赋值，过期时间不变
@@ -106,6 +107,7 @@ SET key value [EX seconds | PX milliseconds | EXAT timestamp | PXAT milliseconds
 SETEX key seconds value
 
 > 自版本2.0.0可用
+>
 > 时间复杂度：O(1)
 
 ex是expire这个单词的缩写，可以将这个命令理解为：set and expire。中文含义就是在内存中设置一个key-value键值对，并指定在seconds秒之后失效。需要注意的是，setex是一个原子操作，这一特点对于缓存极其重要。
@@ -122,6 +124,7 @@ redis> setex key 10 value
 SETNX key value
 
 > 自版本1.0.0可用
+>
 > 时间复杂度：O(1)
 
 nx是not exists的简写，可以将这个命令理解为：set if not exists。中文含义就是在key不存在的情况下才set，如果key已经存在，那么什么操作都不会发生。这一特性对于分布式锁很重要。
