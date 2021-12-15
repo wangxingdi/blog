@@ -5,6 +5,50 @@ slug: "redis-command-string"
 draft: false
 ---
 
+## APPEND
+
+append key value
+
+> 自版本2.0.0可用
+>
+> 时间复杂度：O(1)
+
+此命令的作用是在指定的key对应的value后面，追加字符串。使用此命令时，有两种结果：
+
+* 如果key已经存在，那么就在对应的value基础上进行追加；
+* 如果key不存在，那么就会创建一个key和对应的value，这种情况类似set命令。
+
+### 返回值
+
+进行拼接或者创建后，当前key对应的value值的长度。
+
+### 示例
+
+```bash
+redis> exists mykey
+(integer)0
+redis> append mykey "hi,"
+(integer)3
+redis> append mykey "you"
+(integer)6
+redis> get mykey
+"hi,you"
+```
+
+### 时间序列
+
+这一段内容我并不是很理解，所以暂时保留我的理解。
+
+## DECR
+
+decr mykey num
+
+> 自版本1.0.0可用
+>
+> 时间复杂度：O(1)
+
+
+
 ## SET
 
 SET key value [EX seconds | PX milliseconds | EXAT timestamp | PXAT milliseconds-timestamp | KEEPTTL] [NX | XX] [GET]
