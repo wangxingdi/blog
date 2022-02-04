@@ -2,7 +2,8 @@
 title: "Redis命令-String篇"
 date: "2021-11-25T10:25:25+08:00"
 slug: "redis-command-string"
-categories: ["TECH"]
+categories: ["Tech"]
+tag: ["Redis"]
 draft: false
 ---
 
