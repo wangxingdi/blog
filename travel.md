@@ -2,7 +2,7 @@
 title: "Travel Map"
 date: 2019-08-30
 type: "page"
-url: /travel
+url: "travel"
 draft: false
 ---
 
