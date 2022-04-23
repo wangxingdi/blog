@@ -4,7 +4,7 @@ slug: "requirement-review"
 date: 2022-04-23T22:04:09+08:00
 categories: [ "Review" ]
 tags: [""]
-draft: false
+draft: true
 keywords: ["需求评审"]
 description: "如何进行一场合格的需求评审"
 ---
