@@ -1,13 +1,13 @@
 ---
-title: "Redis命令-String篇"
-slug: "redis-command-string"
-url: "2021/redis-command-string"
-date: "2021-11-25T10:25:25+08:00"
-categories: ["Tech"]
-tags: ["Redis"]
-draft: false
-keywords: ["redis"]
-description: "redis命令之String篇"
+title: Redis命令-String篇
+categories: 
+  - Tech
+tags: 
+  - Redis
+keywords: redis
+description: redis命令之String篇
+date: 2021-11-25 10:25:25
+abbrlink: 20211125
 ---
 
 ## APPEND

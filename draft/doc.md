@@ -1,12 +1,13 @@
 ---
-title: "关于需求评审的一点反思"
-slug: "requirement-review"
-date: 2022-04-23T22:04:09+08:00
-categories: [ "Review" ]
-tags: [""]
-draft: true
-keywords: ["需求评审"]
-description: "如何进行一场合格的需求评审"
+title: 关于需求评审的一点反思
+categories: 
+  - Review
+tags: 
+  - 
+keywords: 需求评审
+description: 如何进行一场合格的需求评审
+date: 2022-04-23 22:04:09
+abbrlink: 20220423
 ---
 
 最近做了几个需求，遇到了最糟糕的局面：

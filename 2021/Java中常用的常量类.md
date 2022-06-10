@@ -5,7 +5,7 @@ categories:
 tags: 
   - JDK
 keywords: []
-description: "Java中常用的常量类"
+description: Java中常用的常量类
 date: 2021-12-27 12:08:54
 abbrlink: 20211227
 ---
