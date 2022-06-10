@@ -1,7 +1,6 @@
 ---
 title: "Java中常用的常量类"
 slug: "frequently-used-constant-class-of-java"
-url: "2021/frequently-used-constant-class-of-java"
 date: 2021-12-27T12:08:54+08:00
 categories: ["Tech"]
 tags: ["JDK"]
