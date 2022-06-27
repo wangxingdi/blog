@@ -58,3 +58,50 @@ ps2：你可以按任意顺序返回答案。
    其中，用到的变量只有固定的`i`和`j`，所以空间复杂度为：$O(1)$。
 
    由于采用的是循环嵌套循环的方式，所以时间复杂度为：$O(n^2)$。
+
+## 空间换时间
+
+### 两次循环
+
+由于上述暴力破解的方式，是一种穷尽遍历，所以时间复杂度及其的不理想。通常，这种`for`循环嵌套`for`循环的形式，可以使用临时的内存来替换一层`for`循环。这样，就可以将时间复杂度从$O(n^2)$降低到$O(n)$。
+
+```java
+public int[] twoSum(int[] nums, int target) {
+    //map内存
+    Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    //第一次循环,将值和索引放入map
+    for(int i=0;i<nums.length;i++){
+        map.put(nums[i], i);
+    }
+    //第二次循环,找到符合要求的数据
+    for(int i=0;i<nums.length;i++){
+        int key = target - nums[i];
+        if(map.containsKey(key) && map.get(key) != i){
+            return new int[]{i, map.get(key)};
+        }
+    }
+    return null;
+}
+```
+
+上述这种形式，使用Map这种数据结构，将嵌套`for`循环变成两次先后顺序的`for`循环，可以大大降低算法的时间复杂度。最终，算法的时间复杂度计算方式应该是$O(n)$ + $O(n)$ = $O(2n)$ = $O(n)$；
+
+### 一次循环
+
+就本题目而言，第一次循环逻辑是必须的吗？并不是！
+
+```java
+public int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    for(int i=0;i<nums.length;i++){
+        int key = target - nums[i];
+        if(map.containsKey(key)){
+            return new int[]{i, map.get(key)};
+        }else{
+            map.put(nums[i], i);
+        }
+    }
+    return null;
+}
+```
+
